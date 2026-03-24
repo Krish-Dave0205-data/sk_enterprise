@@ -34,7 +34,7 @@ body {
 
 .navbar nav a {
   color: #9ca3af;
-  margin: 0 15px;
+  /* margin: 0 15px; */
   text-decoration: none;
   font-size: 15px;
 }
@@ -465,7 +465,7 @@ body {
 
 /*Animation effects*/
 /* LOADER */
-#loader {
+/* #loader {
   height: 100%;
   width: 100%;
   background: black;
@@ -490,6 +490,100 @@ body {
   0%{opacity:0;}
   50%{opacity:1;}
   100%{opacity:0;}
+} */
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  #main {
+    width: 100%;
+    padding: 0;
+  }
+
+}
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+  width: 100%;
+}
+
+.navbar nav {
+  width: 100%;
+}
+
+.navbar nav a {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.btn-primary {
+  width: 100%;
+  display: block;
+}
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* FIX IMPORTANT */
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Sections */
+  .section {
+     padding: 30px 15px !important;
+  }
+
+  /* Cards - IMPROVED (not forced 1 column always) */
+  .cards {
+  grid-template-columns: 1fr;
+}
+
+.card {
+  width: 100%;
+  border-radius: 12px;
+}
+
+  /* About text */
+  #about p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* AMC Form */
+  .amc-container {
+    padding: 20px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* WhatsApp Button */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
 }
 
 /* HOVER PREVIEW */
@@ -500,4 +594,50 @@ body {
   background-size: cover;
   display: none;
   z-index: 999;
+}
+
+/*Media*/
+/* Hamburger hidden on desktop */
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Navbar layout */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  /* FIX: Override desktop nav */
+  .navbar nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  /* ACTIVE MENU */
+  .navbar nav.active {
+    display: flex;
+  }
+
+  /* FIX: Remove horizontal spacing */
+  .navbar nav a {
+    margin: 0;   /* IMPORTANT */
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Button full width */
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+.menu-toggle {
+  margin-left: auto;
 }
